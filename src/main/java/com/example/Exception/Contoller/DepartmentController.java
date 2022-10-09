@@ -1,4 +1,4 @@
-package com.example.Contoller;
+package com.example.Exception.Contoller;
 
 
 import com.example.Service.DepartmentService;
@@ -21,17 +21,17 @@ public class DepartmentController {
     }
 
     @GetMapping("/max-salary")
-    public Employee findDepartmentMaxSalary(int department) {
+    public Employee findDepartmentMaxSalary(Integer department) {
         return departmentService.findDepartmentMaxSalary(department);
     }
 
     @GetMapping("/min-salary")
-    public Employee findDepartmentMinSalary(int department) {
+    public Employee findDepartmentMinSalary(Integer department) {
         return departmentService.findDepartmentMinSalary(department);
     }
 
     @GetMapping(value = "/all", params = "department")
-    public Collection<Employee> findDepartmentCollection(int department) {
+    public Collection<Employee> findDepartmentCollection(Integer department) {
         return departmentService.findDepartmentCollection(department);
     }
 

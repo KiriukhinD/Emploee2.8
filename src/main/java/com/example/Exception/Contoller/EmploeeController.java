@@ -1,4 +1,4 @@
-package com.example.Contoller;
+package com.example.Exception.Contoller;
 
 
 import com.example.Service.EmployeeService;
@@ -20,7 +20,6 @@ public class EmploeeController {
     public EmploeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
-
 
     @GetMapping(path = "/add")
     public Employee add(String name, String surname, int department, double salary) {

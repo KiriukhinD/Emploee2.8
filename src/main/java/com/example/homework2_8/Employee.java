@@ -4,24 +4,24 @@ package com.example.homework2_8;
 import java.util.Objects;
 
 public class Employee {
-    private final String firstName;
-    private final String lastFamily;
+    private final String name;
+    private final String surname;
     private final int department;
     private final double salary;
 
-    public Employee(String firstName, String lastFamily, int department, int salary) {
-        this.firstName = firstName;
-        this.lastFamily = lastFamily;
+    public Employee(String name, String surname, int department, int salary) {
+        this.name = name;
+        this.surname = surname;
         this.department = department;
         this.salary = salary;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public String getLastFamily() {
-        return lastFamily;
+    public String getSurname() {
+        return surname;
     }
 
     public double getSalary() {
@@ -34,7 +34,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "имя : " + firstName + "\nфамилия : " + lastFamily + "\n" + " department " + department + "\n" + " salary " + salary + "\n";
+        return "имя : " + getName() + "\nфамилия : " + getSurname() + "\n" + " department " + getDepartment() + "\n" + " salary " + getSalary() + "\n";
     }
 
     @Override
@@ -42,12 +42,12 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Double.compare(employee.salary, salary) == 0 && department == employee.department && firstName.equals(employee.firstName) && lastFamily.equals(employee.lastFamily);
+        return department == employee.department && Double.compare(employee.salary, salary) == 0 && name.equals(employee.name) && surname.equals(employee.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastFamily, salary, department);
+        return Objects.hash(name, surname, department, salary);
     }
 }
 

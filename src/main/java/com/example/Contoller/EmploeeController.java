@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/emploee")
+@RequestMapping("/employee")
 
 public class EmploeeController {
 
@@ -23,7 +23,7 @@ public class EmploeeController {
 
 
     @GetMapping(path = "/add")
-    public Employee add(String name, String surname, int department, int salary) {
+    public Employee add(String name, String surname, int department, double salary) {
         return employeeService.add(name, surname, department, salary);
     }
 

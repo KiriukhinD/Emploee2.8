@@ -23,8 +23,8 @@ public class EmployeeService {
     }
 
 
-    public Employee add(String name, String surname, int department, int salary) {
-        Employee employee = new Employee(name, surname, department, salary);
+    public Employee add(String name, String surname, int department, double salary) {
+        Employee employee = new Employee(name, surname, department, (int) salary);
         String key = getKey(name, surname);
 
         if (employees.containsKey(key)) {

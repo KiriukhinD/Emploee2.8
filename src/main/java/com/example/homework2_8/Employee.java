@@ -6,10 +6,10 @@ import java.util.Objects;
 public class Employee {
     private final String name;
     private final String surname;
-    private final Integer department;
+    private final int department;
     private final double salary;
 
-    public Employee(String name, String surname, Integer department, double salary) {
+    public Employee(String name, String surname, int department, double salary) {
         this.name = name;
         this.surname = surname;
         this.department = department;
@@ -28,7 +28,7 @@ public class Employee {
         return salary;
     }
 
-    public Integer getDepartment() {
+    public int getDepartment() {
         return department;
     }
 
@@ -42,7 +42,7 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Double.compare(employee.salary, salary) == 0 && name.equals(employee.name) && surname.equals(employee.surname) && department.equals(employee.department);
+        return department == employee.department && Double.compare(employee.salary, salary) == 0 && Objects.equals(name, employee.name) && Objects.equals(surname, employee.surname);
     }
 
     @Override

@@ -21,9 +21,7 @@ public class EmployeeServiceTest {
     public static Stream<Arguments> addNegativ1Params() {
         return Stream.of(
 
-                Arguments.of("Ivan1", "Ivanov", IncorrectNameException.class),
-
-                );
+                Arguments.of("Ivan1", "Ivanov", IncorrectNameException.class));
     }
 
     @AfterEach
